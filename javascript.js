@@ -12,7 +12,7 @@ function createGrid() {
     //Need a return statment?
 }
 //Listens for hover and changes div to black
-const hoverDiv = document.querySelector('div');
+const hoverDiv = document.querySelector('#grid-container');
 hoverDiv.addEventListener('mouseover', (e) => {
     e.target.style.background = 'black';
 });
