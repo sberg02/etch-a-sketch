@@ -16,24 +16,23 @@ body {
 }
 
 #grid-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
     width: 40vw;
     height: 40vw;
     border: 3px solid black;
     border-radius: 5px;
+    /*This is not right*/
     margin-right: 18%;
 }
-
+/*Setting a height and width will not work when grid size adjusted*/
 .grid-divs {
-    height: 6.25%;
-    width: 6.25%;
     background-color: white;
+    /*Need to make flexbasis dyanmic*/
 }
 
 .hovered-div {
-    height: 6.25%;
-    width: 6.25%;
     background-color: black;
 }
 
@@ -49,6 +48,6 @@ body {
     flex-direction: column;
 }
 
-#size-change {
+#size-btn {
     margin-bottom: 10rem;
 }

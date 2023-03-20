@@ -3,6 +3,7 @@ for (let i = 0; i < 256; i++) {
 createGrid();
 }
 
+
 //Listens for hover and changes div to black
 const hoverDiv = document.querySelector('#grid-container');
 hoverDiv.addEventListener('mouseover', (e) => {
@@ -21,7 +22,6 @@ function createGrid() {
     gridContainer.appendChild(createDiv);
     createDiv.classList.add('grid-divs');
 }
-
 //Function to change grid size based on user input
 //Need to find a way to remove current grid
 function sizeChange () {
@@ -29,11 +29,13 @@ function sizeChange () {
     const selectGrid = document.getElementById('grid-container');
     //For whatever reason this works and removeChild does not
     selectGrid.innerHTML = '';
-    
-    for (let i = 0; i < userInput; i++) {
+    for (let i = 0; i < (userInput * userInput); i++) {
         if (userInput >= 1 && userInput <= 100) {
-        createGrid();
+            createGrid();
+            selectGrid.style.gridTemplateColumns = `repeat(${userInput}, 1fr)`;
+            selectGrid.style.gridTemplateRows = `repeat(${userInput}, 1fr)`;
         }
+        //Fix this!
         else if (!isNaN(userInput)) {
             alert('Not a number!');
             return;
