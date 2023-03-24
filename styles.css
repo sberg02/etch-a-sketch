@@ -1,11 +1,13 @@
 html, body {
     height: 100%;
     font-size: 62.5%;
-    font-family:'Courier New', Courier, monospace
+    font-family:'Courier New', Courier, monospace;
+    background-color: red;
 }
 
 .header {
     font-size: 3.6rem;
+    color: gold;
 }
 
 body {
@@ -21,15 +23,14 @@ body {
     grid-template-rows: repeat(16, 1fr);
     width: 40vw;
     height: 40vw;
-    border: 3px solid black;
-    border-radius: 5px;
+    border: 10px solid black;
+    border-radius: 10px;
     /*This is not right*/
     margin-right: 18%;
 }
 /*Setting a height and width will not work when grid size adjusted*/
 .grid-divs {
     background-color: white;
-    /*Need to make flexbasis dyanmic*/
 }
 
 .hovered-div {
@@ -50,4 +51,9 @@ body {
 
 #size-btn {
     margin-bottom: 10rem;
+}
+
+button {
+    border-radius: 50%;
+    font-size: 3.6rem;
 }
