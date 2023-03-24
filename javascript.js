@@ -44,7 +44,7 @@ function sizeChange () {
         }
     }
 
-
+//Function that resets grid to white after button is clicked
 function clearGrid () {
     const selectDivs = document.getElementsByClassName('grid-divs');
 for (let i = 0; i < selectDivs.length; i++) {
@@ -52,5 +52,4 @@ for (let i = 0; i < selectDivs.length; i++) {
 }
 }
 
-//Add button to refresh page like RPS game. Also fix container dimensions.
 
